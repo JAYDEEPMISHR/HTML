@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENERAL REGISTRATION FORM</title>
+</head>
+<body>
+    <h2>GENERAL INQUIRY FORM</h2>
+    <form action="Jaydeep.php">
+        <div>
+            NAME: <input type="text" placeholder="First Name" name="FIRST NAME" id=""><input type="text" placeholder="Last Name" name="LAST NAME" id="">
+        </div>
+        <br>
+
+        <div>
+            PASSWORD: <input type="password" placeholder="Password" name="PASSWORD" id="">
+        </div>
+        <br>
+
+        <div>
+            GENDER:Male<input type="radio"  name="GENDER" id="">Female<input type="radio"  name="GENDER" id="">Other<input type="radio"  name="GENDER" id="">
+        </div>
+        <br>
+
+        <div>
+            MOBILE NUMBER:<input type="phone" placeholder="Mobile Number" name="Mobile Number" id="">
+        </div>
+        <br>
+
+        <div>
+            EMERGENCY NO:<input type="phone" placeholder="Emergency Number" name="Emergency Number" id="">
+        </div>
+        <br>  
+        
+        <div>
+            Do You required Parking? <br> YES<input type="radio" name="Parking" id="">NO<input type="radio" name="Parking" id="">
+        </div>
+        <br>
+        
+        <div>
+            What is your room preferance? <br> 
+            SINGLE BED<input type="radio" name="ROOM" id=""><br>
+            DOUBLE BED<input type="radio" name="ROOM" id=""><br>
+            SHARED ROOM<input type="radio" name="ROOM" id=""><br>
+            <br>
+            <div>
+                <input class="file-upload-input" type="file" name="Myimage" onchange="readURL(this)" accept="Image/*">
+                
+            </div>
+            <br>
+        <div>
+            <input type="submit" name="submit" id="">
+            <input type="reset" name="reset" id="">
+        </div>
+        <br>
+
+     
+    </form>
+</body>
+</html>
