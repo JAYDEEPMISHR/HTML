@@ -1,0 +1,16 @@
+.name:link
+{
+    color: red;
+}
+.name:visited
+{
+    color:blue;
+}
+.name:hover
+{
+    color:blueviolet;
+}
+.name:active
+{
+    color: fuchsia;
+}
