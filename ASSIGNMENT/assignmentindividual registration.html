@@ -81,8 +81,20 @@
             padding-top: 20px;
         }
 
-        td.button{
-            padding-left: 500px;
+        td button.Submit{
+            height: 30px;
+            width: 70px;
+            border-radius: 3px;
+            background-color:rgb(68, 68, 212);
+            color: white;
+            margin-left: 550px;
+        }
+        td button.reset{
+            height: 30px;
+            width: 70px;
+            border-radius: 3px;
+            background-color:rgb(68, 68, 212);
+            color: white;
         }
 
     </style> 
@@ -155,7 +167,7 @@
 
         <tr>
             <td class="email">Email-ID <input type="email" required></td>
-            <td class="mobile">Mobile Number <input type="number" required></td>
+            <td class="mobile">Mobile Number <input type="text" required></td>
         </tr>
 
         <tr>
@@ -190,8 +202,9 @@
         </tr>
 
         <tr>
-            <td class="button"> <input type="button" value="Submit"> </td>
-            <td class="reset"> <input type="button" value="Reset"> </td>
+            <td colspan="2">
+                <button class="Submit">Submit</button> <button class="reset">Reset</button>
+            </td>
         </tr>
 
     </table>
