@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+
+
+    <!-- Javascript Validation -->
+
+    <script type="text/javascript">
+
+        // Validation for First Name
+
+        function checkfname()
+        {
+            var f=document.frm.fname.value;
+            var reg=/^[A-Za-z]+$/;                                                              // Regular Expression
+            if(f=="")
+            {
+                // alert("Please Enter First name")    Hard validation
+                document.getElementById("fname").innerHTML="Please Enter first name"            // Soft validation
+            }
+            else if(!reg.test(f))
+            {
+                document.getElementById("fname").innerHTML="Please Enter Alphabets only"
+            }
+            else
+            {
+                document.getElementById("fname").innerHTML=""
+            }
+        }
+
+        // Validation for Last Name
+
+        function checklname()
+        {
+            var g=document.frm.lname.value;
+            var reg=/^[A-Za-z]+$/;                                                              // Regular Expression
+            if(g=="")
+            {
+                document.getElementById("lname").innerHTML="Please Enter last name"            // Soft validation
+            }
+            else if(!reg.test(g))
+            {
+                document.getElementById("lname").innerHTML="Please Enter Alphabets only"
+            }
+            else
+            {
+                document.getElementById("lname").innerHTML=""
+            }
+        }
+
+        // Validation for Email
+
+        function checkemail()
+        {
+            var g=document.frm.email.value;
+            var reg=/^[A-Za-z0-9-_.]+@[A-Za-z]+\.[A-Za-z]{2,4}$/;                               // Regular Expression
+            if(g=="")
+            {
+                document.getElementById("email").innerHTML="Please Enter Email"                 // Soft validation
+            }
+            else if(!reg.test(g))
+            {
+                document.getElementById("email").innerHTML="Please Enter valid email only"
+            }
+            else
+            {
+                document.getElementById("email").innerHTML=""
+            }
+        }
+
+         // Validation for Mobile Number
+
+        function checkmobile()
+        {
+            var g=document.frm.mobile.value;
+            var reg=/^\d{10}$/;                                                                 // Regular Expression
+            if(g=="")
+            {
+                document.getElementById("mobile").innerHTML="Please Enter Mobile Number"        // Soft validation
+            }
+            else if(!reg.test(g))
+            {
+                document.getElementById("mobile").innerHTML="Please Enter valid mobile number only"
+            }
+            else
+            {
+                document.getElementById("mobile").innerHTML=""
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form name="frm"  action="" method="post">
+        <table>
+            <tr>
+                <td>First Name </td>
+                <td><input type="text" name="fname" onblur="checkfname();"></td>
+                <td><span id="fname"></span></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" name="lname" onblur="checklname();"></td>
+                <td><span id="lname"></span></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email" onblur="checkemail();"></td>
+                <td><span id="email"></span></td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td><input type="number" name="mobile" onblur="checkmobile();"></td>
+                <td><span id="mobile"></span></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><textarea name="address" id="" cols="20" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="female">Female
+                </td>
+            </tr>
+            <tr>
+                <td>Hobby</td>
+                <td>
+                    <input type="checkbox" name="Basketball" id="">Basketball <br>
+                    <input type="checkbox" name="Vollyball" id="">Vollyball <br> 
+                    <input type="checkbox" name="Cricket" id="">Cricket <br> 
+                    <input type="checkbox" name="Reading" id="">Reading <br> 
+                </td>
+            </tr>
+            <tr>
+                <td>Education</td>
+                <td>
+                    <select name="education" id="">
+                        <option value="">---Education---</option>
+                        <option value="BE">BE</option>
+                        <option value="ME">ME</option>
+                        <option value="BSc">BSc</option>
+                        <option value="MSc">MSc</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>BirthDate</td>
+                <td><input type="date" name="bdate"></td>
+            </tr>
+            <tr>
+                <td>Resume</td>
+                <td><input type="file" name="resume" id=""></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" id=""></td>
+            </tr>
+            <tr>
+                <td>Check Password</td>
+                <td><input type="password" name="cpassword" id=""></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" name="" id="" value="submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
